@@ -1,1 +1,87 @@
 // Specific CSS for your home-page
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #b6e5f5;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(90deg, #b6e5f5 0%, #a7d8ea 100%)
+}
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #000000;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  cursor: pointer;
+}
+.search-bar {
+  position: absolute;
+  width: 422px;
+  height: 56px;
+  left: 789px;
+  top: 297px;
+  background: #FCFCFC;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(0, 0, 0, 0.35);
+}
+.search-button {
+  background-color: #25633E;
+  color: #FFFFFF;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+.background-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: auto;
+  height: auto;
+}
+.bg-container {
+  background-image: url(https://afcurgentcarecharlottenc.com/wp-content/uploads/2022/10/AFC-NC-Antibiotics.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 101px);
+}

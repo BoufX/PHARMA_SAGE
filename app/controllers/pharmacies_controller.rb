@@ -1,5 +1,6 @@
 class PharmaciesController < ApplicationController
 
+
  def index 
     @pharmacies = Pharmacy.all
  end
@@ -7,5 +8,6 @@ class PharmaciesController < ApplicationController
  def show
     @pharmacy = Pharmacy.find(params[:id])
  end
+
 
 end

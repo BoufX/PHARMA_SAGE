@@ -10,11 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_21_220335) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_22_103453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "availabilities", force: :cascade do |t|
+    t.bigint "pharmacy_id", null: false
+    t.bigint "medicine_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["medicine_id"], name: "index_availabilities_on_medicine_id"
+    t.index ["pharmacy_id"], name: "index_availabilities_on_pharmacy_id"
+  end
+
+  create_table "medicines", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "pharmacy_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pharmacy_id"], name: "index_orders_on_pharmacy_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "pharmacies", force: :cascade do |t|
+    t.string "name"
+    t.string "phone_number"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,4 +57,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_220335) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "availabilities", "medicines"
+  add_foreign_key "availabilities", "pharmacies"
+  add_foreign_key "orders", "pharmacies"
+  add_foreign_key "orders", "users"
 end

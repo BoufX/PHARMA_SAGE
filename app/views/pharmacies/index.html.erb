@@ -1,0 +1,11 @@
+
+<div class="container text-center">
+<h1> Pharmacy List </h1>
+  <% @pharmacies.each do |pharmacy| %>
+    <ul class="pharmacy-list">
+      <li>  <%= pharmacy.name %> </li> 
+      <li>  <%= pharmacy.address %> </li> 
+      <li>  <%= pharmacy.phone_number %> </li> 
+    </ul>
+  <% end%>
+<div>

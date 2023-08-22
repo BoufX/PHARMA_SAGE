@@ -1,0 +1,7 @@
+<h1>Orders</h1>
+<% @orders.each do |order| %>
+  <ul>
+    <li><%= order.name %></li>
+    <li><%= order.price %></li>
+  </ul>
+<% end %>

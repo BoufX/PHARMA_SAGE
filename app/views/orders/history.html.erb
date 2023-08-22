@@ -1,0 +1,8 @@
+<h1>History of orders</h1>
+<ul>
+<% @orders.each do |order| %>
+<li><% order.name %>
+    <% order.price %>
+</li>
+<% end %>
+</ul>

@@ -1,4 +1,7 @@
 class Medicine < ApplicationRecord
-  belongs_to :pharmacy
+  has_many :pharmacies, through: :availabilities
+  has_many :availabilities
+
+
 
 end

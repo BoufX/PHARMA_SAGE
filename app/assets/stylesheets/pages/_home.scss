@@ -11,6 +11,9 @@ body {
   align-items: center;
   padding: 10px;
   background: #b6e5f5;
+  box-shadow: 0px 0px 10px #5eb0cc;
+  z-index: 2;
+
 }
 .navbar-brand {
   font-family: 'Roboto', sans-serif;
@@ -37,8 +40,8 @@ body {
   position: absolute;
   width: 450px;
   height: 58px;
-  left: 810px;
-  top: 205px;
+  left: 790px;
+  top: 270px;
   background: #FCFCFC;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -119,7 +122,9 @@ body {
 .hero-text {
   position: absolute;
   top: 50px;
-  right: 105px;
+  right: 70px;
+  font-size: 25px;
+
   h1{
     font-family: $roboto-condensed;
   }

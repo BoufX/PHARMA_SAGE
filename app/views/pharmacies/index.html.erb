@@ -1,11 +1,15 @@
+<div id="pharmacy"> 
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <div class="container text-center">
-<h1> Pharmacy List </h1>
+<h1> <i class="fa-solid fa-stethoscope"></i> Pharmacy List </h1>
   <% @pharmacies.each do |pharmacy| %>
+   <%= link_to pharmacy_path(pharmacy), class: "link-href" do %>
     <ul class="pharmacy-list">
       <li> <i class="fa-solid fa-user-doctor"></i> <%= pharmacy.name %> </li> 
       <li> <i class="fa-solid fa-map-pin"></i> <%= pharmacy.address %> </li> 
       <li> <i class="fa-solid fa-phone"></i> <%= pharmacy.phone_number %> </li> 
     </ul>
+   <% end%>
   <% end%>
 <div>
+</div>

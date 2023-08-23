@@ -1,5 +1,6 @@
-.pharmacy-list {
-    width: 50vw;
+.pharmacy-list,
+.ph-selected {
+    width: 35vw;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -14,7 +15,32 @@
     border-color: black;
 }
 
+.link-href {
+    text-decoration: none;
+}
+
+div > h1 {
+    text-decoration: underline;
+  }
+
+a:hover {
+    color: green;
+  } 
+
 .page {
     background-color: #A8D9EA;
     min-height: 100vh;
+}
+
+.selected {
+  text-align: center;
+}
+
+.order-button {
+  background-color: #17B169;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  border-style: solid;
 }

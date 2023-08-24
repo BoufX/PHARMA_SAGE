@@ -3,38 +3,65 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #b6e5f5;
+  background-color: #ffffff;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background: #b6e5f5;
-  box-shadow: 0px 0px 10px  #5eb0cc;
+  padding: 5px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.2);
   z-index: 2;
 
 }
+
+#nav-position {
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+.nav-item:hover {
+  color:#60a76c;
+  font-weight: 700;
+}
 .navbar-brand {
   font-family: 'Roboto', sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 800;
-  color: #000000;
+  color: #004d3aee;
+  transition: .3s all ease-in-out;
+  &:hover {
+    color: #60a76c;
+    transform: scale(1.05);
+  }
 }
 .navbar-right {
   display: flex;
   align-items: center;
 }
+.navbar-spacing {
+  justify-content: space-between;
+  width: 100%;
+}
 .nav-link {
   margin-right: 20px;
   text-decoration: none;
-  color: #000000;
+  color: #004d3aee;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 29px;
   cursor: pointer;
+}
+
+.nav-list--primary {
+  display: flex;
+  list-style:none;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-input {
@@ -56,8 +83,8 @@ body {
 .search-bar {
   position: absolute;
   height: 58px;
-  left: 60em;
-  top: 270px;
+  left: 65px;
+  top: 280px;
   background: #FCFCFC;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -99,7 +126,7 @@ body {
 
 .btn-success {
   background-color: #29854e;
-  border: 1px solid #000000;
+  border: none;
   border-radius: 100vmax;
   margin-top: 4px;
 }
@@ -114,7 +141,7 @@ body {
 }
 .bg-container {
   position: relative;
-  background-image: url(https://afcurgentcarecharlottenc.com/wp-content/uploads/2022/10/AFC-NC-Antibiotics.jpg);
+  background-image: url(https://www.pillpack.com/images/auto/hp-pharmacist-adff28f78c.webp);
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 94px);
@@ -123,14 +150,16 @@ body {
 .hero-text {
   position: absolute;
   top: 50px;
-  right: 70px;
-  font-size: 25px;
+  left: 70px;
 
   h1{
     font-family: $roboto-condensed;
     text-decoration: none;
+    font-size: 45px;
+    color: #275239
   }
   p{
     font-family: $roboto;
+    font-size: 23px;
   }
 }

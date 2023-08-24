@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Order.destroy_all
 User.destroy_all
 Pharmacy.destroy_all
-Order.destroy_all
 
 User.create!(email:"bob@gmail.com", password:"123456")
 Pharmacy.create(name: "Le Wagon Pharmacy", address: "139, Rue Abou Ishak El Marouni", phone_number: "0612234545")
@@ -19,4 +19,6 @@ Pharmacy.create(name: "La Paix Pharmacy", address: "38 Bd Al Massira Al Khadra",
 Pharmacy.create(name: "Helmon's Pharmacy", address: "47 Bd Hay Hassani", phone_number:"0655879654")
 =end
 
-Order.create!(user_id: User.first.id, pharmacy_id: Pharmacy.first.id, name: 'DOLIPRNE 1000mg', price: '25')
+Order.create!(user_id: User.first.id, pharmacy_id: Pharmacy.first.id, name: 'DOLIPRANE 1000mg', price: '25')
+Order.create!(user_id: User.first.id, pharmacy_id: Pharmacy.first.id, name: 'Xanax 0.5', price: '125')
+Order.create!(user_id: User.first.id, pharmacy_id: Pharmacy.first.id, name: 'SITAGLIPTINE', price: '128')

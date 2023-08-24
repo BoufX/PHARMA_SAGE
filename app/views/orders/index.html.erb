@@ -1,7 +1,38 @@
-<h1>Orders</h1>
-<% @orders.each do |order| %>
-  <ul>
-    <li><%= order.name %></li>
-    <li><%= order.price %></li>
-  </ul>
-<% end %>
+<div class="title-container">
+  <h1 class="order-title">Orders</h1>
+</div>
+<div class="order-container">
+  <% @orders.each do |order| %>
+    <ul class = "order-list">
+      <li> Medicine: <%= order.name %></li>
+      <li> Price: <%= order.price %></li>
+    </ul>
+  <% end %>
+  <button id="checkout-btn" type="button" class="btn btn-success"><a href="#">
+  Checkout
+</a></button>
+</div>
+<div class="checkout-form">
+<form action="#">
+         <div class="form-row">
+            <div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">First Name</label>
+</div>
+ <div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">Last Name</label>
+            </div>
+         </div>
+<div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">Phone Number</label>
+          </div>
+<div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">Email Address</label>
+</div>

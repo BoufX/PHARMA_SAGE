@@ -13,9 +13,12 @@ class OrdersController < ApplicationController
   end
 
   def create
+
     @order = Order.new(order_params)
+    @order.user = current_user
+    
     if @order.save
-      redirect_to history_path(@order)
+      redirect_to popup_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,6 +37,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name)
+    params.require(:order).permit(:name, :price, :user_id, :pharmacy_id)
   end
 end

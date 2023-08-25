@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :pharmacies
   resources :orders
   get "/history", to: "orders#history", as: "history"
+  get "/popup", to: "orders#popup", as: "popup"
 end

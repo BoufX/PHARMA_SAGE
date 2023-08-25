@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+  def index
+  end
 
-
-#def home
-#(functions of a searchbar)
-#(an if else statement @pharmacy.empty = error, if full redirect to pharmacy list page)
-#end
 
 end

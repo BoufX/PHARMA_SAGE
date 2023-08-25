@@ -11,10 +11,10 @@ User.destroy_all
 Pharmacy.destroy_all
 
 User.create!(email:"bob@gmail.com", password:"123456")
-Pharmacy.create(name: "Le Wagon Pharmacy", address: "139, Rue Ishak El Marouni", phone_number: "+212-612-23-45-45")
-Pharmacy.create(name: "Abdallah's Pharmacy", address: "285, Bd Ghandi El Idrissi", phone_number: "+212-621-74-59-86")
-Pharmacy.create(name: "Oussama's Pharmacy", address: "38 Bd Al Massira Al Khadra", phone_number: "+212-622-14-78-44")
-Pharmacy.create(name: "Oumaima's Pharmacy", address: "47 Bd Hay Hassani Chergui", phone_number:"+212-655-87-96-54")
+Pharmacy.create(name: "Le Wagon Pharmacy", address: "Bd Brahim Roudani, Casablanca, Morocco", phone_number: "+212-612-23-45-45")
+Pharmacy.create(name: "Abdallah's Pharmacy", address: "Boulevard Bir Anzarane, Casablanca, Morocco", phone_number: "+212-621-74-59-86")
+Pharmacy.create(name: "Oussama's Pharmacy", address: "Hay Inara I 16 rue 13 - Casablanca, Morocco", phone_number: "+212-622-14-78-44")
+Pharmacy.create(name: "Oumaima's Pharmacy", address: "279 Bd Abdelmoumen, Casablanca, Morocco", phone_number:"+212-655-87-96-54")
 
 
 Order.create!(user_id: User.first.id, pharmacy_id: Pharmacy.first.id, name: 'DOLIPRNE 1000mg', price: '25')

@@ -21,7 +21,7 @@
 }
 
 div > h1 {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 a:hover {
@@ -72,10 +72,11 @@ a:hover {
   position:absolute;
   right: 360px;
   top: 24px;
+  color: #080a70;
 }
 
 .card-product p {
-  font-size: 25px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -83,6 +84,7 @@ a:hover {
   position:absolute;
   right: 318px;
   top: 54px;
+  color:#0a0b4f
 }
 
 .card-product .card-product-infos {
@@ -91,9 +93,34 @@ a:hover {
 
 .phone {
   color: white !important;
-  background-color: #1BC47D;
+  background-color: #29854e;
   position: absolute;
   top: 34px;
   right: 20px;
   font-size: 25px;
+}
+
+.ph-select {
+  height: 40px;
+  width: 40px;
+}
+
+.selection {
+  position:absolute;
+  top: 82px;
+  right: 600px;
+
+}
+
+.phone-n {
+  font-size:large;
+  position:absolute;
+}
+
+.card-img-top {
+  height: 163%;
+}
+
+.ph-selected-card {
+  width: 400px;
 }

@@ -1,8 +1,8 @@
-<h2 class="selected"> Pharmacy Selected </h2>
-<ul class="ph-selected">
-    <li> <%= @pharmacy.name %> </li>
-    <li> <%= @pharmacy.address %> </li>
-    <li> <%= @pharmacy.phone_number %> </li>
-</ul>
-
-<button type="button" class="order-button">Sign in to place your order... </button>
+<div class="card selection" style="width: 18rem;">
+  <img class="card-img-top" src="https://www.moroccoworldnews.com/wp-content/uploads/2020/03/Pharmacy.jpg" alt="Card image cap">
+  <div class="card-body ph-selected-card">
+    <h5 class="card-title"><%= @pharmacy.name %></h5>
+    <p class="card-text"> <%= @pharmacy.address %> </p>
+    <a href="#" class="btn btn-primary phone-n"><%= @pharmacy.phone_number %></a>
+  </div>
+</div>

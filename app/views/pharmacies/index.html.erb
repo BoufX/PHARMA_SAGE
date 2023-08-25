@@ -1,23 +1,28 @@
-<div id="pharmacy"> 
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<div class="container text-center">
-<h1> <i class="fa-solid fa-stethoscope"></i> Pharmacy List </h1>
-  <% @pharmacies.each do |pharmacy| %>
-   <%= link_to pharmacy_path(pharmacy), class: "link-href" do %>
-    <div class="card-product">
-      <img src="https://www.lemeilleur.ma/wp-content/uploads/2021/03/medecin-xx.jpg" />
-      <div class="card-product-infos">
-        <h2> <i class="fa-thin fa-user-doctor-hair"></i><%= pharmacy.name %></h2>
-        <p> <strong> <i class="fa-solid fa-map-pin"></i> <%= pharmacy.address %> </strong> </p>
-        <div class="d-grid gap-2">
-         <button class="btn btn-success phone" id="phone" type="button"> <i class="fa-solid fa-phone phone-icon"></i><%= pharmacy.phone_number%></button>
+<div class="text-center" style="display: flex; justify-content: space-between; margin-left:50px">
+  <div style="width: 55%; display: flex, flex-direction: column;">
+    <h2 class="pharmacy-list-title"> <strong>Pharmacy List</strong> </h2>
+    <% @pharmacies.each do |pharmacy| %>
+      <div class="card-product">
+        <%= link_to pharmacy_path(pharmacy), class: "link-href" do %>
+          <img src="https://www.lemeilleur.ma/wp-content/uploads/2021/03/medecin-xx.jpg" />
+          <div class="card-product-infos">
+            <h2> <i class="fa-thin fa-user-doctor-hair"></i><%= pharmacy.name %></h2>
+            <p> <i class="fa-solid fa-map-pin"></i> <%= pharmacy.address %> </p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success phone" id="phone" type="button"> 
+                <i class="fa-solid fa-phone phone-icon"></i>
+                <%= pharmacy.phone_number%>
+              </button>
+            </div>
           </div>
+        <% end%>
       </div>
-    </div>
-
-
-
-   <% end%>
-  <% end%>
-<div>
+    <% end%>
+  </div>
+  
+  <div style="width:45%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div>
 </div>

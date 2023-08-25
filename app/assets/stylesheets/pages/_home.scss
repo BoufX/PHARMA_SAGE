@@ -141,7 +141,7 @@ body {
 }
 .bg-container {
   position: relative;
-  background-image: url(https://www.pillpack.com/images/auto/hp-pharmacist-adff28f78c.webp);
+  background-image: url("background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -164,4 +164,76 @@ body {
   }
 }
 
+section {
+  height: 85vh;
+}
 
+.pp-section--cta {
+  padding: 100px;
+  background-color: #3c8a4c;
+  text-align: center;
+  text-decoration: none;
+
+  /*.pp-cta-txt-mod {
+    text-decoration: none;
+    font-size: 45px;
+    color: #ffffff;
+  }*/
+
+  .section-h {
+    font-family: Georgia, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 50px;
+  }
+
+  .btn-rr {
+    background-color: #20a154cb;
+    color: #eee;
+    border: none;
+    padding: 13.5px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: auto;
+    margin-top: 30px;
+    &:hover {
+      color:#eee;
+      background-color: #5dc271;
+    }
+  }
+
+  .pp-cta-button.large {
+    border: 3px solid #eee;
+    padding: 17px 40px 15px;
+    font-size:  1.375rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  .outline-dark{
+    border: 1px solid hsla(0,0%,100%,.2);
+    background-color: none;
+    color: #eee;
+    padding: 17px 40px 15px;
+    border-radius: 50px;
+    text-decoration:none ;
+    font-size: 18px;
+    margin-top: 100px;
+
+  }
+  .pp-cta-phone-label{
+    color: #eee;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-top: 1.5em;
+    margin-bottom: 4em;
+    line-height: 1.7em;
+  }
+
+
+}

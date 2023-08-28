@@ -46,9 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_155249) do
   end
 
   create_table "pharmacies", force: :cascade do |t|
-    t.string "name"
-    t.string "phone_number"
-    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"

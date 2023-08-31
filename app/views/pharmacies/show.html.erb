@@ -1,9 +1,14 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://minajliki.ma/wp-content/uploads/2022/06/AF1QipOcXBgpue6568szMS-yLXlHgf-EQU83A9Yp_lEww1600-h1000-k-no.jpeg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= @pharmacy.name %></h5>
-    <p class="card-text"><%= @pharmacy.address %></p>
-    <a href="#" class="btn btn-primary"><%= @pharmacy.phone_number %></a>
+<div class="d-flex justify-content-center align-items-center mt-5">
+  <div class="card" style="width: 20em;">
+    <img class="card-img-top" src="https://minajliki.ma/wp-content/uploads/2022/06/AF1QipOcXBgpue6568szMS-yLXlHgf-EQU83A9Yp_lEww1600-h1000-k-no.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= @pharmacy.name %></h5>
+      <p class="card-text"><%= @pharmacy.address %></p>
+      <a href="#" class="btn btn-primary"><%= @pharmacy.phone_number %></a>
+    </div>
   </div>
+
 </div>
-<button type="button" class="btn btn-primary btn-lg btn-block big-btn">Sign in  to place your order</button>
+<div class="d-flex justify-content-center align-items-center">
+<a href="/orders" class="btn btn-primary mt-5"> place your order</a>
+</div>
